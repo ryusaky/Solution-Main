@@ -6,8 +6,8 @@ namespace Solution.CoreApp.BetterPlan.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private CallengueContext _context;
-        public UserRepository(CallengueContext context)
+        private ChallengeContext _context;
+        public UserRepository(ChallengeContext context)
         {
             _context = context;
         }

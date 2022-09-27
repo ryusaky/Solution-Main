@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1700.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookshopServer", "Services\BookshopServer\BookshopServer.csproj", "{818857FA-0C70-469F-85C2-B775D842D45A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solution.Service.ChallengeServer", "Services\Solution.Service.ChallengeServer\Solution.Service.ChallengeServer.csproj", "{818857FA-0C70-469F-85C2-B775D842D45A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0EF2DC49-2D4D-41BE-95FA-8AEA33909AF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreApps", "CoreApps", "{D8499487-E757-4705-AB4C-1C9E94A91F02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookshopClient", "CoreApps\BookshopClient\BookshopClient.csproj", "{63E593BC-94A1-48AF-9A5C-BEBA27B03F15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solution.CoreApp.ChallengeClient", "CoreApps\Solution.CoreApp.ChallengeClient\Solution.CoreApp.ChallengeClient.csproj", "{63E593BC-94A1-48AF-9A5C-BEBA27B03F15}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{33477B0D-67FC-4830-B3ED-C93D5D104DD1}"
 EndProject

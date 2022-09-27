@@ -1,5 +1,5 @@
 using System.Text.Json.Serialization;
-using BookshopServer.Services;
+using Solution.Services.ChallengeServer.Services;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.EntityFrameworkCore;
 using Solution.CoreApp.BetterPlan.Data.Models;
@@ -19,7 +19,7 @@ builder.WebHost.ConfigureKestrel(options =>
 //
 var services = builder.Services;
 var env = builder.Environment;
-services.AddEntityFrameworkNpgsql().AddDbContext<CallengueContext>(opt =>
+services.AddEntityFrameworkNpgsql().AddDbContext<ChallengeContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("ChallengeDbConnection")));
 
 services.AddControllers().AddJsonOptions(x =>

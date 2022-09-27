@@ -6,8 +6,8 @@ namespace Solution.CoreApp.BetterPlan.Repositories
 {
     public class GoalRepository : IGoalRepository
     {
-        private CallengueContext _context;
-        public GoalRepository(CallengueContext context)
+        private ChallengeContext _context;
+        public GoalRepository(ChallengeContext context)
         {
             _context = context;
         }
