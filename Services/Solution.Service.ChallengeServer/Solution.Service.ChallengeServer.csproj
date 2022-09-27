@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>Solution.Service.ChallengeServer</AssemblyName>
+    <UserSecretsId>f7f0dc93-c2a1-42f6-837a-72f427ab38f1</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'BookshopServer' " />
