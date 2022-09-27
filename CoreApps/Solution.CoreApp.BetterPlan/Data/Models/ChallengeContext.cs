@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Solution.CoreApp.BetterPlan.Data.Models
 {
-    public class CallengueContext : DbContext
+    public class ChallengeContext : DbContext
     {
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<PortFolio> PortFolios { get; set; }
@@ -11,7 +11,7 @@ namespace Solution.CoreApp.BetterPlan.Data.Models
         public virtual DbSet<FinancialEntity> FinancialEntities { get; set; }
         public virtual DbSet<GoalCategory> GoalCategories { get; set; }
         //public virtual DbSet<FinancialEntity> FinancialEntities { get; set; }
-        public CallengueContext(DbContextOptions<CallengueContext> options) : base(options){}
+        public ChallengeContext(DbContextOptions<ChallengeContext> options) : base(options){}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

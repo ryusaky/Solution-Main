@@ -4,11 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Solution.Service.ChallengeServer</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'BookshopServer' " />
   <ItemGroup>
-    <Protobuf Include="../../Proto/bookshop.proto" BookshopServer="Server" />
-    <Protobuf Include="../../Proto/challenge.proto" BookshopServer="Server" />
+    <Protobuf Include="../../Proto/challenge.proto" ChallengeServer="Server" />
   </ItemGroup>
 
   <ItemGroup>

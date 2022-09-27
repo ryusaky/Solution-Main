@@ -5,11 +5,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>Solution.CoreApp.ChallengeClient</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="../../proto/bookshop.proto" GrpcServices="Client" />
-    <Protobuf Include="../../proto/challenge.proto" GrpcServices="Client" />
+    <Protobuf Include="../../proto/challenge.proto" ChallengeService="Client" />
   </ItemGroup>
 
   <ItemGroup>

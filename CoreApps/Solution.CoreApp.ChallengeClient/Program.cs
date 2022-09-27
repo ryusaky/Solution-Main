@@ -1,5 +1,5 @@
 ﻿using Grpc.Net.Client;
-using Bookshop;
+using Challenge;
 
 // The port number must match the port of the gRPC server.
 using var channel = GrpcChannel.ForAddress("http://localhost:5000");

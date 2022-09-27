@@ -1,12 +1,12 @@
 ﻿using System;
 using Grpc.Core;
-using Bookshop;
+using Challenge;
 using Solution.CoreApp.BetterPlan.Repositories;
 using Google.Protobuf.WellKnownTypes;
-using static Bookshop.GoalModel.Types;
+using static Challenge.GoalModel.Types;
 using System.Text.Json;
 
-namespace BookshopServer.Services
+namespace Solution.Services.ChallengeServer.Services
 {
     public class UserService : ChallengeUsers.ChallengeUsersBase
     {
