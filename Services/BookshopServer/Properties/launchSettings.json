@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "BookshopServer": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:5198;https://localhost:7220",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

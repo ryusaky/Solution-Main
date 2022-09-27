@@ -1,0 +1,102 @@
+
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "Bookshop";
+
+message UserModel {
+  int32 id = 1;
+  string firstname = 2;
+  string surname = 3;
+  google.protobuf.Timestamp created = 4;
+  google.protobuf.Timestamp modified = 5;
+  int32 advisorid = 6;
+  int32 currencyid = 7;
+  message AdvisorModel{
+    int32 id = 1;
+    string firstname = 2;
+    string surname = 3;
+  }
+  AdvisorModel advisor = 8;
+}
+
+message QuestionOne{
+    int32 id = 1;
+    string userfullname = 2;
+    string advisorfullname = 3;
+    google.protobuf.Timestamp created = 4;
+}
+message RequestId{
+    int32 id = 1; 
+}
+message RequestUserIdAndGoalId{
+    int32 userid = 1;
+    int32 goalid = 2;
+}
+message UserQuestionFourth{
+    int32 id = 1;
+    repeated GoalModel goal =2;
+}
+message GoalQuestionFifth{
+    GoalModel goal =1;
+}
+
+message GoalModel{
+    int32 id = 1;
+    string title = 2;
+    int32 years = 3;
+    int32 initialinvestment = 4;
+    int32 monthlycontribution = 5;
+    int32 targetamount = 6;
+    int32 userid = 7;
+    google.protobuf.Timestamp created = 8;
+    google.protobuf.Timestamp modified = 9;
+    int32 goalcategoryid = 10;
+    int32 displaycurrencyid = 11;
+    int32 risklevelid = 12;
+    int32 portfolioid = 13;
+    int32 financialentityid = 14;
+    int32 currencyid = 15;
+    message PortFolio{
+        int32 id = 1;
+        double maxrangeyear = 2;
+        double minrangeyear = 3;
+        string uuid = 4;
+        string title = 5;
+        optional string description = 6;
+        int32 financialentityid = 7;
+        int32 risklevelid = 8;
+        google.protobuf.Timestamp created = 9;
+        google.protobuf.Timestamp modified = 10;
+        bool isdefault = 11;
+        optional string profitability = 12;
+        optional int32 investmentstrategyid = 13;
+        optional string version = 14;
+        optional string extraprofitabilitycurrencycode = 15;
+        optional double estimatedprofitability = 16;
+        double bpcomission = 17;
+    }
+    PortFolio portfolio = 16;
+    message GoalCategory{
+        int32 id = 1;
+        string title =2 ;
+    }
+    GoalCategory goalcategory = 17;
+    message FinancialEntity{
+        int32 id = 1;
+        string  title = 2 ;
+    }
+    FinancialEntity financialentity = 18;
+}
+
+message GetUserListRequest {}
+message GetUserListResponse { repeated UserModel user = 1; }
+message GetGoalsListByUserResponse { repeated GoalModel response = 1;}
+
+service ChallengeUsers {
+  rpc GetAllUsers(GetUserListRequest) returns (GetUserListResponse) {}
+  rpc GetUserById(RequestId) returns(QuestionOne){}
+  rpc GetAllGoalsByUserId(RequestId) returns (UserQuestionFourth){}
+
+  rpc GetDetailforGoal(RequestUserIdAndGoalId) returns (GoalQuestionFifth){}
+}
